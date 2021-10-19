@@ -5,20 +5,53 @@
     box-sizing: border-box;
 }
 
-body {
+.main-container {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 /* header */
-
+header {
+    width: 90vw;
+    height: 30vh;
+}
 /* aside */
-
+section {
+    width: 10vw;
+    height: 90vh;
+    order: -1;
+}
 /* main */
-
+main {
+    width: 90vw;
+    height: 60vh;
+}
 /* footer */
+footer {
+    width: 100vw;
+    height: 10vh;
+}
 
 /* debug */
 .debug {
     background-color: aqua;
+}
+
+.debug header {
+    background-color: blanchedalmond;
+}
+
+.debug section {
+    background-color: brown;
+}
+
+.debug main {
+    background-color: chartreuse;
+}
+
+.debug footer {
+    background-color: chocolate;
 }
