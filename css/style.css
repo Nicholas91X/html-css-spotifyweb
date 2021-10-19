@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .main-container {
     width: 100vw;
     height: 90vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    position: relative;
 }
 
 .scroll-container {
@@ -41,7 +46,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    position: relative;
 }
 
 button.upgrade {
@@ -66,9 +70,9 @@ nav ul {
 nav ul li {
     padding: 2px 10px;
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 nav ul li a {
@@ -111,7 +115,7 @@ section ul li a {
 }
 
 #logo-big {
-    width: 80%;
+    width: 70%;
     display: none;
 }
 
@@ -130,13 +134,13 @@ section ul li a {
 .create-playlist {
     color: rgba(122,124,129,255);
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .create-playlist i {
     background-color: gray;
     color: black;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     padding: 5px;
     margin-right: 5px;
@@ -165,6 +169,11 @@ section ul li a {
     background-color: gray;
 }
 
+.bottom-container li:last-child a {
+    color: white;
+    font-weight: 700;
+}
+
 
 /* main */
 main {
@@ -172,14 +181,54 @@ main {
     min-height: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.categoria {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    padding-top: 10px;
+}
+
+.sottocategoria {
+    width: 100%;
+    font-size: 10px;
+    color: rgba(122,124,129,255);
+    padding: 5px 0 10px;
 }
 
 main .contenuto {
-    width: 130px;
-    height: 150px;
-    margin: 2px;
+    width: 170px;
+    min-height: 180px;
+    margin: 5px;
 }
+
+main .contenuto img {
+    width: 100%;
+}
+
+main .contenuto .album {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    padding: 5px 0;
+}
+
+main .contenuto .artista {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(122,124,129,255);
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
 /* footer */
 footer {
     width: 100vw;
@@ -256,13 +305,13 @@ footer {
 
 /* debug */
 .debug {
-    background-color: aqua;
+    background-color: black;
 }
 
 /* .debug .icon {
     border: 1px solid black;
 } */
-
+/* 
 .debug header {
     background-color: blanchedalmond;
 }
@@ -277,11 +326,11 @@ footer {
 
 .debug main {
     background-color: chartreuse;
-}
+} */
 
-.debug main .contenuto {
+/* .debug main .contenuto {
     background-color: darkblue;
-}
+} */
 
 .debug footer {
     background-color: chocolate;
