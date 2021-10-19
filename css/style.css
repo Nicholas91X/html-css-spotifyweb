@@ -13,26 +13,45 @@
     flex-direction: column;
 }
 
+
 /* header */
 header {
-    width: 90vw;
-    height: 30vh;
+    width: 90%;
+    height: 30%;
 }
 /* aside */
 section {
-    width: 10vw;
-    height: 90vh;
+    width: 10%;
+    height: 100%;
     order: -1;
 }
 /* main */
 main {
-    width: 90vw;
-    height: 60vh;
+    width: 90%;
+    height: 70%;
 }
 /* footer */
 footer {
     width: 100vw;
     height: 10vh;
+}
+
+@media screen and (min-width: 420px) {
+    header {
+        width: calc(100% - 200px);
+        height: 30%;
+    }
+    /* aside */
+    section {
+        width: 200px;
+        height: 100%;
+        order: -1;
+    }
+    /* main */
+    main {
+        width: calc(100% - 200px);
+        height: 70%;
+    }
 }
 
 /* debug */
