@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify layout</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="debug">
 
@@ -15,19 +16,20 @@
             <!-- contenitore top -->
             <div class="top-container">
                 <ul>
-                    <li>
-                        <img id="logo" src="" alt="">
+                    <li class="logo">
+                        <img id="logo-small" src="img/logo-small.svg" alt="Logo small">
+                        <img id="logo-big" src="img/logo.svg" alt="Logo">
                     </li>
                     <li>
-                        <img class="icon" src="" alt="">
+                        <img class="icon" src="img/home.svg" alt="Home">
                         <a href="#">Home</a>
                     </li>
                     <li>
-                        <img class="icon" src="" alt="">
+                        <img class="icon" src="img/search.svg" alt="Search">
                         <a href="#">Cerca</a>
                     </li>
                     <li>
-                        <img class="icon" src="" alt="">
+                        <img class="icon" src="img/libreria.svg" alt="Libreria">
                         <a href="#">La tua libreria</a>
                     </li>
                 </ul>
@@ -39,7 +41,7 @@
                     </div>
                     <!-- Crea Playlist -->
                     <div class="create-playlist">
-                        Crea Playlist
+                        <i class="far fa-plus"></i> Crea Playlist
                     </div>
                     <!-- nome playlist -->
                     <div class="nome">
@@ -73,11 +75,11 @@
             <div class="bottom-container">
                 <ul>
                     <li>
-                        <img class="icon" src="" alt="">
+                        <img id="download" class="icon" src="img/download.svg" alt="Download">
                         <a href="#">Installa app</a>
                     </li>
                     <li>
-                        <img class="icon" src="" alt="">
+                        <img id="profile" class="icon" src="img/profile.svg" alt="Profilo">
                         <a href="#">John Doe</a>
                     </li>
                 </ul>
