@@ -11,13 +11,22 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    overflow: hidden;
 }
 
+.scroll-container {
+    width: 90%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
 
 /* header */
 header {
-    width: 90%;
+    width: 100%;
     height: 25%;
     display: flex;
     align-items: flex-end;
@@ -46,15 +55,57 @@ section {
     height: 100%;
     order: -1;
 }
+
+section .top-container,
+section .bottom-container {
+    width: 100%;
+    height: 50%;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+}
 /* main */
 main {
-    width: 90%;
-    height: 75%;
+    width: 100%;
+    min-height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .contenuto {
+    width: 120px;
+    height: 150px;
+    margin: 2px;
 }
 /* footer */
 footer {
     width: 100vw;
     height: 10vh;
+}
+
+.footer-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.footer-container .left,
+.footer-container .right {
+    width: 30%;
+    height: 100%;
+}
+
+.footer-container .central {
+    width: 40%;
+    height: 100%;
 }
 
 @media screen and (min-width: 420px) {
@@ -80,6 +131,10 @@ footer {
     background-color: aqua;
 }
 
+.debug .icon {
+    border: 1px solid black;
+}
+
 .debug header {
     background-color: blanchedalmond;
 }
@@ -88,10 +143,23 @@ footer {
     background-color: brown;
 }
 
+.debug section .top-container {
+    background-color: darkmagenta;
+}
+
 .debug main {
     background-color: chartreuse;
 }
 
+.debug main .contenuto {
+    background-color: darkblue;
+}
+
 .debug footer {
     background-color: chocolate;
+}
+
+.debug .footer-container .left,
+.debug .footer-container .right {
+    background-color: darkseagreen;
 }
