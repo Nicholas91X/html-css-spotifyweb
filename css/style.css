@@ -15,7 +15,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: relative;
 }
 
 .scroll-container {
@@ -41,24 +40,32 @@ a {
 
 /* header */
 header {
-    width: 100%;
+    width: 90%;
     height: 25%;
+    background-color: black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.pulsante {
+    width: 100%;
+    text-align: right;
 }
 
 button.upgrade {
-    position: absolute;
-    top: 10px;
-    right: 0;
     font-size: 10px;
     text-transform: uppercase;
     background-color: transparent;
     color: white;
     padding: 5px 15px;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 2em;
+    margin: 10px 5px;
 }
 
 nav ul {
@@ -146,6 +153,7 @@ section ul li a {
     margin-right: 5px;
 }
 
+
 .nome li {
     margin-top: 10px;
 }
@@ -183,6 +191,7 @@ main {
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
+    margin-top: 22.5vh;
 }
 
 .categoria {
@@ -201,10 +210,11 @@ main {
 }
 
 main .contenuto {
-    width: 170px;
+    width: calc(100% / 2 - 10px);
     min-height: 180px;
     margin: 5px;
 }
+
 
 main .contenuto img {
     width: 100%;
@@ -232,7 +242,11 @@ main .contenuto .artista {
 /* footer */
 footer {
     width: 100vw;
-    height: 10vh;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-container {
@@ -241,15 +255,105 @@ footer {
     display: flex;
 }
 
+.footer-container .left {
+    justify-content: flex-start;
+}
+
+.left img {
+    width: 30px;
+    height: 30px;
+}
+
+.left .image,
+.left .info,
+.left .like {
+    margin-left: 8px;
+}
+
+.left .info {
+    width: 30%;
+}
+
+.left .info div:first-child {
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.left .info div:last-child {
+    font-size: 8px;
+    font-weight: 700;
+    color: rgba(122,124,129,255);
+}
+
+.like {
+    font-size: 12px;
+    color: rgba(122,124,129,255);
+}
+
+.like i:first-child {
+    margin-right: 8px;
+}
+
 .footer-container .left,
 .footer-container .right {
     width: 30%;
     height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .footer-container .central {
     width: 40%;
     height: 100%;
+}
+
+.player {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player i {
+    margin: 0 5px;
+    color: white;
+    font-size: 12px;
+}
+
+.time {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-counter {
+    font-size: 8px;
+    color: white;
+}
+
+.time-bar {
+    width: 60%;
+    height: 2px;
+    border: 1px solid ;
+    margin: 0 5px;
+    color: rgba(122,124,129,255);
+}
+
+.footer-container .right {
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+.right i {
+    font-size: 10px;
+    color: white;
+    margin: 0 5px;
+}
+
+.mxw {
+    max-width: 100px;
 }
 
 @media screen and (min-width: 420px) {
@@ -297,11 +401,28 @@ footer {
         display: inline-block;
     }
 
+    header {
+        width: calc(100% - 150px);
+    }
+
     .scroll-container {
         width: calc(100% - 150px);
     }
    
 }
+
+@media screen and (min-width: 568px) {
+    main .contenuto {
+        width: calc(100% / 4 - 10px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .contenuto {
+        width: calc(100% / 6 - 10px);
+    }
+}
+
 
 /* debug */
 .debug {
@@ -332,11 +453,11 @@ footer {
     background-color: darkblue;
 } */
 
-.debug footer {
+/* .debug footer {
     background-color: chocolate;
 }
 
 .debug .footer-container .left,
 .debug .footer-container .right {
     background-color: darkseagreen;
-}
+} */
