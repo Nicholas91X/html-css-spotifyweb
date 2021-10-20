@@ -19,7 +19,6 @@ body {
 
 .scroll-container {
     width: 90%;
-    height: 100%;
     overflow-y: scroll;
 }
 
@@ -38,10 +37,29 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 /* header */
 header {
-    width: 90%;
-    height: 25%;
+    width: calc(90% - 5px);
+    height: 100px;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
@@ -49,13 +67,14 @@ header {
     align-items: flex-end;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 5px;
     z-index: 1000;
 }
 
 .pulsante {
     width: 100%;
     text-align: right;
+    align-self: start;
 }
 
 button.upgrade {
@@ -80,7 +99,7 @@ nav ul li {
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 nav ul li a {
@@ -104,12 +123,12 @@ section .bottom-container {
 }
 
 .top-container {
-    height: 88%;
+    height: 85%;
 }
 
 
 .bottom-container {
-    height: 12%;
+    height: 15%;
     justify-content: flex-end;
     overflow-y: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
@@ -197,13 +216,12 @@ section ul li a {
 /* main */
 main {
     width: 100%;
-    min-height: 75%;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
-    margin-top: 22.5vh;
+    margin-top: 100px;
 }
 
 .categoria {
@@ -212,6 +230,7 @@ main {
     font-weight: 700;
     color: white;
     padding-top: 10px;
+    margin-left: 5px;
 }
 
 .sottocategoria {
@@ -219,6 +238,7 @@ main {
     font-size: 10px;
     color: rgba(122,124,129,255);
     padding: 5px 0 10px;
+    margin-left: 5px;
 }
 
 main .contenuto {
@@ -425,7 +445,7 @@ footer {
     }
 
     header {
-        width: calc(100% - 150px);
+        width: calc(100% - 155px);
     }
 
     .scroll-container {
@@ -456,8 +476,8 @@ footer {
 /* .debug .icon {
     border: 1px solid black;
 } */
-
-/* .debug header {
+/* 
+.debug header {
     background-color: blanchedalmond;
 }
 
