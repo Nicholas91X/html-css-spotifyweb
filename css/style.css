@@ -11,7 +11,7 @@ body {
 
 .main-container {
     width: 100vw;
-    height: 90vh;
+    height: calc(100vh - 50px);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -50,6 +50,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 1000;
 }
 
 .pulsante {
@@ -90,6 +91,7 @@ section {
     width: 10%;
     height: 100%;
     order: -1;
+    background-color: black;
 }
 
 section .top-container,
@@ -101,14 +103,21 @@ section .bottom-container {
     align-items: center;
 }
 
+.top-container {
+    height: 80%;
+}
+
+
+.bottom-container {
+    height: 20%;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
 section ul li a {
     display: none;
     color: rgba(122,124,129,255);
     font-size: 10px;
-}
-
-.top-container {
-    height: 80%;
 }
 
 .logo {
@@ -127,6 +136,7 @@ section ul li a {
 }
 
 #playlist {
+    height: 20%;
     display: none;
     padding-top: 10px;
 }
@@ -153,16 +163,16 @@ section ul li a {
     margin-right: 5px;
 }
 
+.nome {
+    width: 80%;
+    height: 100%;
+    overflow-y: auto;
+}
 
 .nome li {
     margin-top: 10px;
 }
 
-.bottom-container {
-    height: 20%;
-    justify-content: flex-end;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-}
 
 .bottom-container li {
     margin-bottom: 5px;
@@ -187,6 +197,7 @@ section ul li a {
 main {
     width: 100%;
     min-height: 75%;
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -247,6 +258,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1001;
 }
 
 .footer-container {
@@ -425,9 +437,9 @@ footer {
 
 
 /* debug */
-.debug {
+/* .debug {
     background-color: black;
-}
+} */
 
 /* .debug .icon {
     border: 1px solid black;
