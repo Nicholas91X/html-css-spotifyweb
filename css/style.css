@@ -104,13 +104,14 @@ section .bottom-container {
 }
 
 .top-container {
-    height: 80%;
+    height: 88%;
 }
 
 
 .bottom-container {
-    height: 20%;
+    height: 12%;
     justify-content: flex-end;
+    overflow-y: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -368,6 +369,16 @@ footer {
     max-width: 100px;
 }
 
+@media screen and (max-height: 380px) {
+    .bottom-container {
+        height: 0%;
+    }
+
+    .top-container {
+        height: 100%;
+    }
+}
+
 @media screen and (min-width: 420px) {
     
     section {
@@ -436,6 +447,7 @@ footer {
 }
 
 
+
 /* debug */
 /* .debug {
     background-color: black;
@@ -444,8 +456,8 @@ footer {
 /* .debug .icon {
     border: 1px solid black;
 } */
-/* 
-.debug header {
+
+/* .debug header {
     background-color: blanchedalmond;
 }
 
@@ -459,7 +471,7 @@ footer {
 
 .debug main {
     background-color: chartreuse;
-} */
+}  */
 
 /* .debug main .contenuto {
     background-color: darkblue;
@@ -472,4 +484,4 @@ footer {
 .debug .footer-container .left,
 .debug .footer-container .right {
     background-color: darkseagreen;
-} */
+}
