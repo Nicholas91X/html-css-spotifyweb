@@ -41,6 +41,7 @@ a:hover {
     color: white;
 }
 
+/* Setting delle scroll-bar */
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -148,12 +149,20 @@ section .bottom-container {
     height: 85%;
 }
 
-
 .bottom-container {
     height: 15%;
     justify-content: flex-end;
     overflow-y: hidden;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.bottom-container li {
+    margin-bottom: 5px;
+}
+
+.bottom-container li:last-child a {
+    color: white;
+    font-weight: 700;
 }
 
 section ul li a {
@@ -223,11 +232,6 @@ section ul li a {
     margin-top: 10px;
 }
 
-
-.bottom-container li {
-    margin-bottom: 5px;
-}
-
 #download {
     transform: scale(.75);
 }
@@ -236,12 +240,6 @@ section ul li a {
     border-radius: 50%;
     background-color: gray;
 }
-
-.bottom-container li:last-child a {
-    color: white;
-    font-weight: 700;
-}
-
 
 /* main */
 main {
@@ -299,7 +297,6 @@ main .contenuto {
     margin: 5px;
     position: relative;
 }
-
 
 main .contenuto img {
     width: 100%;
@@ -558,8 +555,6 @@ footer {
         width: calc(100% / 6 - 10px);
     }
 }
-
-
 
 /* debug */
 /* .debug {
