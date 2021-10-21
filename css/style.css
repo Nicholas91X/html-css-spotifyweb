@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: white;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -85,13 +89,18 @@ button.upgrade {
     padding: 5px 15px;
     border: 1px solid white;
     border-radius: 2em;
-    margin: 10px 5px;
+    margin: 10px 8px;
+}
+
+button.upgrade:hover {
+    transform: scale(1.1);
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 nav ul li {
@@ -100,6 +109,19 @@ nav ul li {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.underline {
+    width: 20%;
+    border: 2px solid green;
+    display: none;
+}
+
+nav ul li:hover .underline {
+    display: block;
 }
 
 nav ul li a {
@@ -174,6 +196,14 @@ section ul li a {
     font-weight: 700;
 }
 
+.create-playlist:hover i {
+    background-color: white;
+}
+
+.create-playlist:hover {
+    color: white;
+}
+
 .create-playlist i {
     background-color: gray;
     color: black;
@@ -241,10 +271,33 @@ main {
     margin-left: 5px;
 }
 
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    display: none;
+} 
+
+.overlay i {
+    font-size: 60px;
+    color: white;
+    margin-top: 50%;
+    transform: translate(0, -50%);
+}
+
+main .contenuto:hover .overlay {
+    display: block;
+}
+
 main .contenuto {
     width: calc(100% / 2 - 10px);
     min-height: 180px;
     margin: 5px;
+    position: relative;
 }
 
 
