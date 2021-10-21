@@ -115,8 +115,8 @@ nav ul li {
 }
 
 .underline {
-    width: 20%;
-    border: 2px solid green;
+    width: 30%;
+    border: 1px solid lime;
     display: none;
 }
 
@@ -372,6 +372,12 @@ footer {
     color: rgba(122,124,129,255);
 }
 
+.left .info div:last-child:hover,
+.like i:first-child:hover,
+.like i:last-child:hover {
+    color: white;
+}
+
 .like {
     font-size: 12px;
     color: rgba(122,124,129,255);
@@ -401,6 +407,10 @@ footer {
     align-items: center;
 }
 
+.player i:nth-child(3):hover {
+    transform: scale(1.5);
+}
+
 .player i {
     margin: 0 5px;
     color: white;
@@ -422,9 +432,39 @@ footer {
 .time-bar {
     width: 60%;
     height: 2px;
-    border: 1px solid ;
+    border: 2px solid ;
+    border-radius: 2em;
     margin: 0 5px;
     color: rgba(122,124,129,255);
+    position: relative;
+}
+
+.time-bar:hover .gone {
+    background-color: lime;
+}
+
+.time-bar:hover .gone-hover {
+    display: block;
+}
+
+.gone {
+    width: 21.5%;
+    border: 1px solid white;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    background-color: white;
+}
+
+.gone-hover {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: 21.5%;
+    display: none;
 }
 
 .footer-container .right {
